@@ -10,7 +10,6 @@ export function ProfileOptions() {
   const { user, setUser } = useUser()
   const [mounted, setMounted] = useState(false)
   const [nome, setNome] = useState("")
-
   const [pop, setPop] = useState(true)
 
   const closeModal = () => setPop((state: any) => !state)
