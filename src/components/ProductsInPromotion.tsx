@@ -19,7 +19,7 @@ export function ListProductsInPromotion() {
   return mount && (
     <section className="w-full flex flex-col gap-4">
       <strong className="text-blue-800 font-bold text-3xl">
-        Acreditamos que você pode gostar
+        Produtos promocionais
       </strong>
 
       <div className="flex items-center gap-2 w-full overflow-scroll [&::-webkit-scrollbar]:hidden">
