@@ -20,6 +20,8 @@ export function ProfileOptions() {
     setUser({});
   }
 
+  console.log(pop)
+
   const changeName = useCallback(() => {
     setNome(window.innerWidth < 720 ? user?.name?.split(" ")[0] || "" : user?.name || "");
   }, [user?.name]);
