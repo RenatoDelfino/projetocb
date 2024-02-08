@@ -12,7 +12,7 @@ export function ProfileOptions() {
   const [nome, setNome] = useState("")
   const [pop, setPop] = useState(true)
 
-  console.log("Hello")
+  console.log("Hello", pop)
 
   const closeModal = () => setPop((state: any) => !state)
 
