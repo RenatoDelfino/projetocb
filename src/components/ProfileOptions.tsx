@@ -12,9 +12,7 @@ export function ProfileOptions() {
   const [nome, setNome] = useState("")
   const [pop, setPop] = useState(true)
 
-  console.log("Hello", pop)
-
-  const closeModal = () => setPop((state: any) => !state)
+  const closeModal = () => setPop(state => !state)
 
   const handleLogoutUser = () => {
     localStorage.clear();
@@ -28,10 +26,6 @@ export function ProfileOptions() {
   const handleResize = useMemo(() => {
     return () => changeName();
   }, [changeName]);
-
-  useEffect(() => {
-    closeModal()
-  }, [user?.birthday])
 
   useEffect(() => {
     changeName();
@@ -115,7 +109,7 @@ export function ProfileOptions() {
             </div>
           </Dialog.Content>
         </Dialog.Portal>
-      </Dialog.Root>
+      </ Dialog.Root>
     )
   )
 }
