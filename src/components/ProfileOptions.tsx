@@ -12,14 +12,14 @@ export function ProfileOptions() {
   const [nome, setNome] = useState("")
   const [pop, setPop] = useState(true)
 
+  console.log("Hello")
+
   const closeModal = () => setPop((state: any) => !state)
 
   const handleLogoutUser = () => {
     localStorage.clear();
     setUser({});
   }
-
-  console.log(pop)
 
   const changeName = useCallback(() => {
     setNome(window.innerWidth < 720 ? user?.name?.split(" ")[0] || "" : user?.name || "");
@@ -51,7 +51,10 @@ export function ProfileOptions() {
         <Dialog.Trigger asChild>
           {
             user?.name && (
-              <button onClick={closeModal} className="flex items-center gap-2 justify-center rounded-lg p-2 hover:bg-black/10 transition-all">
+              <button
+                onClick={closeModal}
+                className="flex items-center gap-2 justify-center rounded-lg p-2 hover:bg-black/10 transition-all"
+              >
                 <User size={20} />
                 <strong className="md:text-sm">{nome}</strong>
               </button>
